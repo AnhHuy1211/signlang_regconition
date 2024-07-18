@@ -12,5 +12,5 @@
              "dest": "app.py"
          }
      ],
-     "installCommand": "pip install -r requirements.txt"
+     "installCommand": "pip install --disable-pip-version-check -r requirements.txt"
  }
