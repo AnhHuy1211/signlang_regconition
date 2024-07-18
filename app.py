@@ -12,8 +12,8 @@ def get():  # put application's code here
     return jsonify({"data": "Not implemented"}), 501
 
 
-@app.route('/judge', methods=['POST'])
-def judge():
+@app.route('/api/judge', methods=['POST'])
+def post():
     body = request.get_json()
     if "src" not in body:
         return jsonify({"error": "src is required"}), 400
