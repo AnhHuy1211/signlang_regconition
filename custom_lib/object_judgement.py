@@ -6,8 +6,6 @@ import tensorflow as tf
 from object_detection.utils import config_util
 from object_detection.protos import pipeline_pb2
 from google.protobuf import text_format
-from object_detection.utils import label_map_util
-from object_detection.utils import visualization_utils as viz_utils
 from object_detection.builders import model_builder
 from custom_lib import config_tf as cfg
 
