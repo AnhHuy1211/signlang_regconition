@@ -66,7 +66,6 @@ def run_inference(model, src):
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
-            print("Can't receive frame (stream end?). Exiting...")
             break
         resized_frame = cv2.resize(frame, (640, 480), interpolation=cv2.INTER_AREA)
         image_np = np.array(resized_frame)
@@ -132,7 +131,6 @@ def categorize_scores(scores, thresholds):
 
 def get_final_judgment(judgment: list):
     max_row = max(judgment, key=lambda x: x[2])
-    print(max_row)
     if max_row[0] == 1:
         return  "high"
     elif max_row[0] == 0:
